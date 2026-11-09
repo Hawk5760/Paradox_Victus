@@ -1,0 +1,8 @@
+{
+  "name": "Bunk Planner AI",
+  "description": "Interactive Indian college cartoon attendance management and bunk planning universe. Bhai, Aaj College Jaayein Ya Nahi?",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

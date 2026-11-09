@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+@layer utilities {
+  /* Cartoon comic shadows with hard ink outlines */
+  .shadow-comic {
+    box-shadow: 0 5px 0 #17264a;
+  }
+  .shadow-comic-sm {
+    box-shadow: 0 3px 0 #17264a;
+  }
+  .shadow-comic-lg {
+    box-shadow: 0 8px 0 #17264a, 0 12px 20px rgba(0, 0, 0, 0.35);
+  }
+  .shadow-comic-yellow {
+    box-shadow: 0 5px 0 #d9b024;
+  }
+  .shadow-comic-red {
+    box-shadow: 0 5px 0 #a82828;
+  }
+
+  /* Hide scrollbar for clean comic swipe */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+/* Comic Cartoon Keyframe Animations */
+@keyframes comicWobble {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-3deg) scale(1.02); }
+  75% { transform: rotate(3deg) scale(0.98); }
+}
+
+@keyframes dubeyRage {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  20% { transform: translate(-2px, 2px) rotate(-1.5deg); }
+  40% { transform: translate(-2px, -2px) rotate(1.5deg); }
+  60% { transform: translate(2px, 2px) rotate(-1deg); }
+  80% { transform: translate(2px, -2px) rotate(1deg); }
+}
+
+@keyframes rubberBand {
+  0% { transform: scale(1); }
+  30% { transform: scaleX(1.15) scaleY(0.85); }
+  40% { transform: scaleX(0.85) scaleY(1.15); }
+  50% { transform: scaleX(1.08) scaleY(0.92); }
+  65% { transform: scaleX(0.96) scaleY(1.04); }
+  75% { transform: scaleX(1.02) scaleY(0.98); }
+  100% { transform: scale(1); }
+}
+
+@keyframes stampSlam {
+  0% { transform: scale(2.2) rotate(-15deg); opacity: 0; }
+  60% { transform: scale(0.95) rotate(-3deg); opacity: 1; }
+  80% { transform: scale(1.05) rotate(0deg); }
+  100% { transform: scale(1) rotate(-2deg); opacity: 1; }
+}
+
+@keyframes floatingPaperPlane {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(6px, -10px) rotate(4deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+.animate-comic-wobble {
+  animation: comicWobble 2.5s ease-in-out infinite;
+}
+
+.animate-dubey-rage {
+  animation: dubeyRage 0.35s ease-in-out infinite;
+}
+
+.animate-rubber-band {
+  animation: rubberBand 0.8s ease;
+}
+
+.animate-stamp-slam {
+  animation: stampSlam 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+.animate-plane-float {
+  animation: floatingPaperPlane 3s ease-in-out infinite;
+}
+
+/* Touch feedback for mobile */
+@media (max-width: 768px) {
+  button, [role="button"] {
+    -webkit-tap-highlight-color: transparent;
+  }
+}

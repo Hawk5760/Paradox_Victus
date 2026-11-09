@@ -1,0 +1,6 @@
+{
+  "summary": "Implementation plan for enabling uncensored, savage hostel responses by default for Bunty and Chintu in Bunk Planner AI, including prompt architecture, Gemini safety configuration, fallback dialogues, and UI savage indicators.",
+  "updatedAt": "2026-11-06T10:41:18.363315341Z",
+  "requestFeedback": true,
+  "userFacing": true
+}
